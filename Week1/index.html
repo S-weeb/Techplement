@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Harshpreet Singh</title>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="nav-image">
+            <img src="./assets/logo.avif" alt="" srcset="" class="nav-image">
+        </div>
+        <div><a href="#about">About me</a></div>
+        <div><a href="#projects">Projects</a></div>
+        <div><a href="#skills">Skills</a></div>
+        <div><a href="#contact">Contact info</a></div>
+    </div>
+
+    <div id="head" class="relative-block">
+        <div class="head-text">
+            <h1>Hello I'm</h1>
+            <h1>Harshpreet</h1>
+            <h1>Singh</h1>
+            <h2>
+                Frontend Developer, UI Designer
+            </h2>
+        </div>
+
+        <div class="head-image">
+            <img src="./assets/my-pic.png" class="head-image">
+        </div>
+    </div>
+
+
+    <div id="about" class="relative-block">
+        <h1 class="rotated-head">About</h1>
+        <div class="extra-left-margin-block">
+            <div class="about-banner">
+                <div>N A M E</div>
+                <p>Harshpreet Singh</p>
+                <br>
+
+                <div>B I R T H D A Y</div>
+                <p>31. 01. 2003</p>
+                <br>
+
+                <div>R O L E</div>
+                <p>Frontend Developer</p>
+                <br>
+
+                <div>E M A I L</div>
+                <p><a href="mailto:stone@example.com">samsungtable6a6a@gmail.com</a></p>
+                <br>
+
+                <div>L O C A T I O N</div>
+                <p>India</p>
+                <br>
+
+                <div>I N T E R E S T S</div>
+                <ul>
+                    <li>Games</li>
+                    <li>Books</li>
+                    <li>Movies</li>
+                </ul>
+                <br>
+            </div>
+
+            <div class="about-text">
+
+                👋 Hello! I'm Harshpreet Singh, a passionate and results-driven developer with a knack for
+                turning ideas into impactful solutions. 🚀
+                <br><br>
+                🏆 I've had the privilege of winning accolades such as the First Runner-up at Hack4Sustainability and
+                contributing to noteworthy projects like 'Saarthi-Camps' and 'Vriddhi.'
+                <br><br>
+                💻 Proficient in technologies like React.js, Tailwind CSS, and more, I bring a robust skill set and a
+                commitment to creating seamless and visually engaging web experiences.
+                <br><br>
+                🌐 Join me on this journey as we explore the intersection of creativity and technology in the digital
+                landscape!
+                <a href="http://bit.ly/hrshpreet" id="download-button" download>D O W N L O A D - R E S U M E</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="projects" class="relative-block">
+        <h1 class="rotated-head">Projects</h1>
+
+        <div class="extra-left-margin-block" id="project-list">
+
+        </div>
+    </div>
+
+    <div id="skills" class="relative-block">
+        <h1 class="rotated-head">Skills</h1>
+        <div class="extra-left-margin-block" id="skills-section">
+
+        </div>
+    </div>
+
+    <div id="contact" class="relative-block">
+        <h1 class="rotated-head">Contact</h1>
+        <div class="extra-left-margin-block">
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="./script.js"></script>
+
+</html>

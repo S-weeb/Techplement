@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: purple;
+    background-color: pink;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; 
+}
+@media only screen and (max-width: 600px) {
+    body {
+        padding-top: 60px;
+    }
+}
+
+a {
+    text-decoration: none;
+    text-underline-offset: 5px;
+    position: relative; /* Ensure proper positioning for pseudo-element */
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Set the height of the underline */
+    background-color: purple; /* Set the color of the underline */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Initially, set the width to 0 to make it invisible */
+    transform-origin: bottom left; /* Set the transform origin for scaling effect */
+    transition: transform 0.3s ease; /* Adjust the duration and easing as needed */
+}
+
+a:hover::after,
+a:active::after,
+a:focus::after {
+    transform: scaleX(1);
+}
+
+
+#navbar {
+    position: fixed;
+    padding: 10px;
+    right: 0;
+    width: 200px;
+    z-index: 10;
+    height: 100vh;
+    background-color: pink;
+}
+@media only screen and (max-width: 600px) {
+    #navbar {
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: fit-content;
+        background-color: pink;
+        display: flex;
+        justify-items: center;
+        justify-content: space-evenly;
+        padding: 15px 0;
+        padding-left: 0;
+    }
+}
+
+#navbar a {
+    font-size: larger;
+    color: purple;
+}
+.nav-image {
+    width: 200px;
+    aspect-ratio: 1;
+}
+@media only screen and (max-width: 600px) {
+    .nav-image {
+        width: 0;
+        height: 0;
+    }
+}
+
+#head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+h1 {
+    color: white;
+    font-size: 120px;
+}
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+.head-text {
+    width: 50%;
+    overflow-x: visible;
+    height: fit-content;
+}
+@media only screen and (max-width: 600px) {
+    .head-text {
+        width: 100vw;
+    }
+}
+.head-image {
+    width: 35vw;
+    height: 70vh;
+    position: absolute;
+    left: 30%;
+    border-radius: 10px;
+    background-color: skyblue;
+    height: max-content;
+    z-index: -1;
+}
+@media only screen and (max-width: 600px) {
+    .head-image {
+        width: 90vw;
+        height: auto;
+        position: relative;
+        display: block;
+        margin-top: 20px;
+        left: 0;
+        right: 0;
+    }
+}
+.relative-block {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .relative-block {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        margin-bottom: 50px;
+    }
+}
+.rotated-head {
+    position: absolute;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+}
+@media only screen and (max-width: 600px) {
+    .rotated-head {
+        transform: none;
+        writing-mode:horizontal-tb;
+        position: relative;
+    }
+}
+.extra-left-margin-block{
+    margin-left: 150px;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    /* align-items: center; */
+}
+@media only screen and (max-width: 600px) {
+    .extra-left-margin-block {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+
+.about-banner {
+    background-color: purple;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+.about-banner div{
+    color: #ddd;
+    font-size: smaller;
+}
+.about-banner p {
+    color: #fff;
+}
+.about-banner a{
+    color: #fff;
+}
+
+ul > li
+{
+    list-style-type: none;
+}
+.about-text {
+    width: 47%;
+    margin-left: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .about-text {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+#download-button {
+    display: block;
+    width: 47%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 20px;
+    background-color: purple;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    font-weight: bold;
+}
+
+#download-button:hover {
+    background-color: #6c3483; /* Darker purple on hover */
+}
+
+@media only screen and (max-width: 600px) {
+    #download-button {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+#project-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.project{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+
+.project img {
+    width: 20vw;
+    /* height: 20vh; */
+    height: 20vw;
+    object-fit: contain;
+}
+@media only screen and (max-width: 600px) {
+    .project{
+        display: block;
+    }
+    .project img{
+        width: 100%;
+    }
+}
+
+
+#skills-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    gap: 20px;
+    width: 70%;
+}
+
+.skill-brick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    color: white;
+    background-color: purple;
+    border-radius: 10px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    #skills-section {
+        grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+        width: 100%;
+    }
+    .skill-brick {
+        padding: 5px;
+    }
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+@media only screen and (max-width: 600px) {
+    #contact-form {
+        width: 100%;
+    }
+}
